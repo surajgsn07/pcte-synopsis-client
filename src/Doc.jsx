@@ -28,7 +28,7 @@ const DocGenerator = () => {
         
         setLoading(true); // Set loading to true when process starts
         try {
-            const res = await axios.post("https://pcte-synopsis-maker-api.netlify.app/api/getcontent", { prompt: promptContent });
+            const res = await axios.post("https://pcte-synopsis-server.onrender.com/api/getcontent", { prompt: promptContent });
             
 
 

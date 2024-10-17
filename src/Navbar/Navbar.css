@@ -1,0 +1,87 @@
+/* Navbar styling */
+.navbar {
+    background-color: #0c1f38; /* Dark theme background */
+    padding: 1rem 2rem;
+    
+    width: calc(100% - 40px); /* Adjust for body padding */
+    margin: 20px auto 0; /* Add top margin to match body padding */
+    transition: background-color 0.3s ease-in-out;
+}
+
+/* Navbar container to center on small screens and align on larger screens */
+.navbar-container {
+    max-width: 1200px;
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+}
+
+/* Logo styling */
+.navbar-logo {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+}
+
+/* Image sizing with a subtle shadow effect */
+.logo-img {
+    height: 40px;
+    width: 40px;
+    transition: height 0.3s, width 0.3s, box-shadow 0.3s;
+    border-radius: 8px; /* Soft rounding for modern look */
+    box-shadow: 0 2px 6px rgba(255, 255, 255, 0.1); /* Light shadow to make it stand out */
+}
+
+/* Hover effect for logo image */
+.logo-img:hover {
+    box-shadow: 0 4px 12px rgba(255, 255, 255, 0.2); /* Enhanced shadow on hover */
+}
+
+/* Responsive adjustments for mobile screens */
+@media (max-width: 768px) {
+    .navbar {
+        padding: 0.5rem 1.5rem;
+        width: calc(100% - 30px); /* Adjust width for mobile */
+        margin: 10px auto; /* Smaller top margin on mobile */
+    }
+    .navbar-container {
+        flex-direction: column; /* Stack items vertically */
+        gap: 0.5rem; /* Smaller gap on mobile */
+    }
+    .logo-img {
+        height: 36px;
+        width: 36px;
+    }
+}
+
+/* Larger screens: Align logo left and resize */
+@media (min-width: 1024px) {
+    .navbar-container {
+        justify-content: flex-start;
+    }
+    .logo-img {
+        height: 48px;
+        width: 48px;
+    }
+}
+
+/* Extra-large screens for more spacing */
+@media (min-width: 1400px) {
+    .navbar {
+        padding: 1.5rem 3rem;
+        width: calc(100% - 60px); /* Adjust width for larger screens */
+    }
+    .logo-img {
+        height: 52px;
+        width: 52px;
+    }
+}
+
+/* Optional: Navbar background change on scroll */
+.navbar.scrolled {
+    background-color: #1f1f1f; /* Darker background after scroll */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.6);
+}

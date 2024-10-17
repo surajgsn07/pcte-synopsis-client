@@ -1,0 +1,53 @@
+/* Footer styling */
+.footer {
+    background-color: #0c1f38; /* Dark theme background */
+    padding: 20px 0; /* Padding for top and bottom */
+    margin-top: 50px; /* Space from the content above */
+    text-align: center; /* Center text */
+}
+
+/* Footer container to center items */
+.footer-container {
+    max-width: 1200px; /* Max width for larger screens */
+    margin: 0 auto; /* Center the container */
+    display: flex; /* Flexbox for layout */
+    flex-direction: column; /* Stack items vertically */
+    align-items: center; /* Center items horizontally */
+    gap: 1.5rem; /* Space between items */
+}
+
+/* Contact info styling */
+.contact-info {
+    color: #ffffff; /* White text for contrast */
+    font-size: 14px; /* Font size */
+}
+
+/* Social media styling */
+.social-media {
+    display: flex; /* Flexbox for layout */
+    justify-content: center; /* Center icons horizontally */
+    gap: 1.5rem; /* Space between icons */
+}
+
+/* Icon styling */
+.footer-icon {
+    color: #ffffff; /* Icon color */
+    transition: transform 0.3s; /* Transition effect for hover */
+}
+
+/* Hover effect for icons */
+.footer-icon:hover {
+    transform: scale(1.1); /* Slight zoom effect on hover */
+}
+
+/* Copyright styling */
+.copyright {
+    margin-top: 10px; /* Space between icons and copyright text */
+    color: #ffffff; /* White text for contrast */
+    font-size: 14px; /* Smaller font size */
+}
+
+p{
+    font-size: large;
+    font-weight: 500;
+}

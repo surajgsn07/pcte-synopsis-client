@@ -1,0 +1,135 @@
+/* DocGenerator.css */
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #0c1f38; /* Dark blue background for the body */
+    color: white; /* White text for better contrast */
+    margin: 0;
+    padding: 20px;
+}
+
+h1 {
+    color: #1e90ff; /* Bright blue color for the heading */
+    text-align: center;
+    margin-bottom: 20px; /* Space below the heading */
+    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.4); /* Subtle shadow for depth */
+}
+
+.container {
+    background: rgba(255, 255, 255, 0.1); /* Semi-transparent white for glass effect */
+    backdrop-filter: blur(15px); /* Blur effect for the glass */
+    border-radius: 15px; /* More pronounced rounded corners for the container */
+    padding: 30px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.5); /* Deeper shadow for depth */
+    max-width: 600px; /* Maximum width for the container */
+    margin: auto; /* Center the container */
+    display: flex; /* Use flexbox for responsiveness */
+    flex-direction: column; /* Stack children vertically */
+    gap: 20px; /* Increased space between form elements */
+}
+
+input[type="text"],
+input[type="email"] {
+    width: 100%; /* Full width for inputs */
+    padding: 15px; /* Padding inside inputs */
+    border: 2px solid #1e90ff; /* Bright blue border for inputs */
+    border-radius: 5px; /* Slightly rounded corners */
+    box-sizing: border-box; /* Ensure padding doesn't affect width */
+    font-size: 16px; /* Font size for inputs */
+    background: rgba(255, 255, 255, 0.2); /* Semi-transparent background for inputs */
+    color: white; /* White text for inputs */
+    transition: border-color 0.3s, box-shadow 0.3s; /* Smooth transition for border color */
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus {
+    border-color: #00bfff; /* Lighter blue on focus */
+    outline: none; /* Remove outline on focus */
+    box-shadow: 0 0 5px rgba(0, 191, 255, 0.7); /* Light blue glow effect */
+}
+
+button {
+    background-color: #1e90ff; /* Bright blue background for the button */
+    color: white; /* White text for the button */
+    padding: 15px; /* Padding around button text */
+    border: none; /* Remove default border */
+    border-radius: 5px; /* Rounded corners for button */
+    cursor: pointer; /* Pointer cursor on hover */
+    font-size: 16px; /* Font size for button */
+    width: 100%; /* Full width for button */
+    transition: background-color 0.3s, box-shadow 0.3s; /* Smooth transitions */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Subtle shadow for button */
+}
+
+button:hover {
+    background-color: #00bfff; /* Lighter blue on hover */
+    box-shadow: 0 8px 20px rgba(0, 191, 255, 0.5); /* Stronger shadow on hover */
+}
+
+button:active {
+    background-color: #007acc; /* Darker blue when button is pressed */
+}
+
+/* Responsive Styles */
+@media (max-width: 600px) {
+    .container {
+        padding: 20px; /* Reduced padding for mobile */
+    }
+
+    input[type="text"],
+    input[type="email"],
+    button {
+        font-size: 14px; /* Smaller font size for mobile */
+        padding: 12px; /* Reduced padding for mobile */
+    }
+}
+
+/* Additional Animation Styles */
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.05);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+button {
+    animation: pulse 3s infinite; /* Adding pulse animation to the button */
+}
+
+/* General Placeholder Styles */
+::placeholder {
+    color: rgba(0, 0, 0, 0.7); /* Medium blue for better visibility */
+    font-style: italic;
+    opacity: 1; /* Full opacity */
+}
+
+input[type="text"]::placeholder,
+input[type="email"]::placeholder {
+    color: rgba(0, 0, 0, 0.7); /* Medium blue */
+    font-style: italic;
+    transition: color 0.3s ease; /* Smooth transition for focus state */
+}
+
+input[type="text"]:focus::placeholder,
+input[type="email"]:focus::placeholder {
+    color: rgb(0, 0, 0); /* Bright blue for focused state */
+}
+.spinner {
+    animation: spin 1s linear infinite;
+    font-size: 1.5em;
+    margin-right: 8px;
+}
+
+@keyframes spin {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
